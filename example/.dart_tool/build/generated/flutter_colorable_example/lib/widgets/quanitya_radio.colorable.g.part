@@ -1,0 +1,45 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaRadio
+const _$QuanityaRadioColorableProperties = <String>[
+  'activeColor',
+  'fillColor',
+  'focusColor',
+];
+
+/// Schema for QuanityaRadio colorable properties
+const _$QuanityaRadioSchema = ColorableWidgetSchema(
+  widgetKey: 'radio',
+  description: 'Radio button selection',
+  properties: [
+    ColorableProperty(
+      name: 'activeColor',
+      description: 'Active/selected color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'fillColor',
+      description: 'Fill color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'focusColor',
+      description: 'Focus color',
+      defaultColor: 'color2',
+    ),
+  ],
+);
+
+/// Creates QuanityaRadio from AI color assignments
+QuanityaRadio _$QuanityaRadioFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaRadio(
+    activeColor: colors['activeColor']!,
+    fillColor: colors['fillColor']!,
+    focusColor: colors['focusColor']!,
+  );
+}

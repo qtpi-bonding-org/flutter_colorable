@@ -1,0 +1,59 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaTextField
+const _$QuanityaTextFieldColorableProperties = <String>[
+  'cursorColor',
+  'fillColor',
+  'borderColor',
+  'focusedBorderColor',
+  'errorBorderColor',
+];
+
+/// Schema for QuanityaTextField colorable properties
+const _$QuanityaTextFieldSchema = ColorableWidgetSchema(
+  widgetKey: 'textField',
+  description: 'Text input field',
+  properties: [
+    ColorableProperty(
+      name: 'cursorColor',
+      description: 'Cursor color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'fillColor',
+      description: 'Fill color',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'borderColor',
+      description: 'Border color',
+      defaultColor: 'neutral1',
+    ),
+    ColorableProperty(
+      name: 'focusedBorderColor',
+      description: 'Focused border color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'errorBorderColor',
+      description: 'Error border color',
+      defaultColor: 'color3',
+    ),
+  ],
+);
+
+/// Creates QuanityaTextField from AI color assignments
+QuanityaTextField _$QuanityaTextFieldFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaTextField(
+    cursorColor: colors['cursorColor']!,
+    fillColor: colors['fillColor']!,
+    borderColor: colors['borderColor']!,
+    focusedBorderColor: colors['focusedBorderColor']!,
+    errorBorderColor: colors['errorBorderColor']!,
+  );
+}

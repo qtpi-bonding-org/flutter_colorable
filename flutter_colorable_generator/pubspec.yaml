@@ -1,0 +1,20 @@
+name: flutter_colorable_generator
+description: Code generator for flutter_colorable annotations. Extracts colorable properties and generates schema metadata.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  flutter_colorable:
+    path: ../
+  analyzer: ">=6.0.0 <8.0.0"
+  build: ">=2.4.0 <5.0.0"
+  source_gen: ">=1.4.0 <5.0.0"
+
+dev_dependencies:
+  build_runner: ^2.4.0
+  build_test: ^2.2.0
+  test: ^1.24.0
+  lints: ^3.0.0

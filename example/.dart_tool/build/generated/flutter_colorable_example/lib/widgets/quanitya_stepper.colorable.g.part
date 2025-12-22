@@ -1,0 +1,52 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaStepper
+const _$QuanityaStepperColorableProperties = <String>[
+  'buttonColor',
+  'iconColor',
+  'valueBackgroundColor',
+  'valueTextColor',
+];
+
+/// Schema for QuanityaStepper colorable properties
+const _$QuanityaStepperSchema = ColorableWidgetSchema(
+  widgetKey: 'stepper',
+  description: 'Numeric stepper with +/- buttons',
+  properties: [
+    ColorableProperty(
+      name: 'buttonColor',
+      description: 'Button color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'iconColor',
+      description: 'Icon color',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'valueBackgroundColor',
+      description: 'Value background color',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'valueTextColor',
+      description: 'Value text color',
+      defaultColor: 'neutral1',
+    ),
+  ],
+);
+
+/// Creates QuanityaStepper from AI color assignments
+QuanityaStepper _$QuanityaStepperFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaStepper(
+    buttonColor: colors['buttonColor']!,
+    iconColor: colors['iconColor']!,
+    valueBackgroundColor: colors['valueBackgroundColor']!,
+    valueTextColor: colors['valueTextColor']!,
+  );
+}

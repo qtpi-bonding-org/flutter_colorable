@@ -1,0 +1,52 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaSlider
+const _$QuanityaSliderColorableProperties = <String>[
+  'activeColor',
+  'inactiveColor',
+  'thumbColor',
+  'overlayColor',
+];
+
+/// Schema for QuanityaSlider colorable properties
+const _$QuanityaSliderSchema = ColorableWidgetSchema(
+  widgetKey: 'slider',
+  description: 'Numeric slider input',
+  properties: [
+    ColorableProperty(
+      name: 'activeColor',
+      description: 'Active track color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'inactiveColor',
+      description: 'Inactive track color',
+      defaultColor: 'neutral1',
+    ),
+    ColorableProperty(
+      name: 'thumbColor',
+      description: 'Thumb color',
+      defaultColor: 'color2',
+    ),
+    ColorableProperty(
+      name: 'overlayColor',
+      description: 'Overlay color when pressed',
+      defaultColor: 'color1',
+    ),
+  ],
+);
+
+/// Creates QuanityaSlider from AI color assignments
+QuanityaSlider _$QuanityaSliderFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaSlider(
+    activeColor: colors['activeColor']!,
+    inactiveColor: colors['inactiveColor']!,
+    thumbColor: colors['thumbColor']!,
+    overlayColor: colors['overlayColor']!,
+  );
+}

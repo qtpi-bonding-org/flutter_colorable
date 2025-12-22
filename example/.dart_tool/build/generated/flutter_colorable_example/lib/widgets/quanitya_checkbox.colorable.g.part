@@ -1,0 +1,45 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaCheckbox
+const _$QuanityaCheckboxColorableProperties = <String>[
+  'activeColor',
+  'checkColor',
+  'borderColor',
+];
+
+/// Schema for QuanityaCheckbox colorable properties
+const _$QuanityaCheckboxSchema = ColorableWidgetSchema(
+  widgetKey: 'checkbox',
+  description: 'Boolean checkbox input',
+  properties: [
+    ColorableProperty(
+      name: 'activeColor',
+      description: 'Active/checked color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'checkColor',
+      description: 'Check mark color',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'borderColor',
+      description: 'Border color',
+      defaultColor: 'neutral1',
+    ),
+  ],
+);
+
+/// Creates QuanityaCheckbox from AI color assignments
+QuanityaCheckbox _$QuanityaCheckboxFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaCheckbox(
+    activeColor: colors['activeColor']!,
+    checkColor: colors['checkColor']!,
+    borderColor: colors['borderColor']!,
+  );
+}

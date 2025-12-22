@@ -1,0 +1,59 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaDatePicker
+const _$QuanityaDatePickerColorableProperties = <String>[
+  'primaryColor',
+  'backgroundColor',
+  'headerColor',
+  'borderColor',
+  'fillColor',
+];
+
+/// Schema for QuanityaDatePicker colorable properties
+const _$QuanityaDatePickerSchema = ColorableWidgetSchema(
+  widgetKey: 'datePicker',
+  description: 'Date picker input',
+  properties: [
+    ColorableProperty(
+      name: 'primaryColor',
+      description: 'Primary accent color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'backgroundColor',
+      description: 'Dialog background color',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'headerColor',
+      description: 'Header color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'borderColor',
+      description: 'Border color',
+      defaultColor: 'neutral1',
+    ),
+    ColorableProperty(
+      name: 'fillColor',
+      description: 'Fill color',
+      defaultColor: 'neutral2',
+    ),
+  ],
+);
+
+/// Creates QuanityaDatePicker from AI color assignments
+QuanityaDatePicker _$QuanityaDatePickerFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaDatePicker(
+    primaryColor: colors['primaryColor']!,
+    backgroundColor: colors['backgroundColor']!,
+    headerColor: colors['headerColor']!,
+    borderColor: colors['borderColor']!,
+    fillColor: colors['fillColor']!,
+  );
+}

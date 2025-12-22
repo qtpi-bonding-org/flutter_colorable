@@ -1,0 +1,52 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaChip
+const _$QuanityaChipColorableProperties = <String>[
+  'selectedColor',
+  'backgroundColor',
+  'labelColor',
+  'borderColor',
+];
+
+/// Schema for QuanityaChip colorable properties
+const _$QuanityaChipSchema = ColorableWidgetSchema(
+  widgetKey: 'chips',
+  description: 'Choice chip selection',
+  properties: [
+    ColorableProperty(
+      name: 'selectedColor',
+      description: 'Selected background color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'backgroundColor',
+      description: 'Unselected background color',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'labelColor',
+      description: 'Label text color',
+      defaultColor: 'neutral1',
+    ),
+    ColorableProperty(
+      name: 'borderColor',
+      description: 'Border color',
+      defaultColor: 'neutral1',
+    ),
+  ],
+);
+
+/// Creates QuanityaChip from AI color assignments
+QuanityaChip _$QuanityaChipFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaChip(
+    selectedColor: colors['selectedColor']!,
+    backgroundColor: colors['backgroundColor']!,
+    labelColor: colors['labelColor']!,
+    borderColor: colors['borderColor']!,
+  );
+}

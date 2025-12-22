@@ -1,0 +1,59 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaTimePicker
+const _$QuanityaTimePickerColorableProperties = <String>[
+  'primaryColor',
+  'backgroundColor',
+  'dialBackgroundColor',
+  'borderColor',
+  'fillColor',
+];
+
+/// Schema for QuanityaTimePicker colorable properties
+const _$QuanityaTimePickerSchema = ColorableWidgetSchema(
+  widgetKey: 'timePicker',
+  description: 'Time picker input',
+  properties: [
+    ColorableProperty(
+      name: 'primaryColor',
+      description: 'Primary accent color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'backgroundColor',
+      description: 'Dialog background color',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'dialBackgroundColor',
+      description: 'Dial background color',
+      defaultColor: 'neutral1',
+    ),
+    ColorableProperty(
+      name: 'borderColor',
+      description: 'Border color',
+      defaultColor: 'neutral1',
+    ),
+    ColorableProperty(
+      name: 'fillColor',
+      description: 'Fill color',
+      defaultColor: 'neutral2',
+    ),
+  ],
+);
+
+/// Creates QuanityaTimePicker from AI color assignments
+QuanityaTimePicker _$QuanityaTimePickerFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaTimePicker(
+    primaryColor: colors['primaryColor']!,
+    backgroundColor: colors['backgroundColor']!,
+    dialBackgroundColor: colors['dialBackgroundColor']!,
+    borderColor: colors['borderColor']!,
+    fillColor: colors['fillColor']!,
+  );
+}

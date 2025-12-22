@@ -1,0 +1,52 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaToggle
+const _$QuanityaToggleColorableProperties = <String>[
+  'activeThumbColor',
+  'activeTrackColor',
+  'inactiveThumbColor',
+  'inactiveTrackColor',
+];
+
+/// Schema for QuanityaToggle colorable properties
+const _$QuanityaToggleSchema = ColorableWidgetSchema(
+  widgetKey: 'toggle',
+  description: 'Boolean toggle switch',
+  properties: [
+    ColorableProperty(
+      name: 'activeThumbColor',
+      description: 'Active thumb color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'activeTrackColor',
+      description: 'Active track color',
+      defaultColor: 'color2',
+    ),
+    ColorableProperty(
+      name: 'inactiveThumbColor',
+      description: 'Inactive thumb color',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'inactiveTrackColor',
+      description: 'Inactive track color',
+      defaultColor: 'neutral1',
+    ),
+  ],
+);
+
+/// Creates QuanityaToggle from AI color assignments
+QuanityaToggle _$QuanityaToggleFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaToggle(
+    activeThumbColor: colors['activeThumbColor']!,
+    activeTrackColor: colors['activeTrackColor']!,
+    inactiveThumbColor: colors['inactiveThumbColor']!,
+    inactiveTrackColor: colors['inactiveTrackColor']!,
+  );
+}

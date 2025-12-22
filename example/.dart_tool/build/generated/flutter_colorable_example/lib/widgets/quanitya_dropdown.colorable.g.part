@@ -1,0 +1,59 @@
+// **************************************************************************
+// ColorableGenerator
+// **************************************************************************
+
+// Colorable properties for QuanityaDropdown
+const _$QuanityaDropdownColorableProperties = <String>[
+  'dropdownColor',
+  'fillColor',
+  'borderColor',
+  'focusedBorderColor',
+  'iconColor',
+];
+
+/// Schema for QuanityaDropdown colorable properties
+const _$QuanityaDropdownSchema = ColorableWidgetSchema(
+  widgetKey: 'dropdown',
+  description: 'Dropdown selection menu',
+  properties: [
+    ColorableProperty(
+      name: 'dropdownColor',
+      description: 'Dropdown menu background',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'fillColor',
+      description: 'Input fill color',
+      defaultColor: 'neutral2',
+    ),
+    ColorableProperty(
+      name: 'borderColor',
+      description: 'Border color',
+      defaultColor: 'neutral1',
+    ),
+    ColorableProperty(
+      name: 'focusedBorderColor',
+      description: 'Focused border color',
+      defaultColor: 'color1',
+    ),
+    ColorableProperty(
+      name: 'iconColor',
+      description: 'Icon color',
+      defaultColor: 'color1',
+    ),
+  ],
+);
+
+/// Creates QuanityaDropdown from AI color assignments
+QuanityaDropdown _$QuanityaDropdownFromColors({
+  required Map<String, Color> colors,
+  // Add other required parameters here
+}) {
+  return QuanityaDropdown(
+    dropdownColor: colors['dropdownColor']!,
+    fillColor: colors['fillColor']!,
+    borderColor: colors['borderColor']!,
+    focusedBorderColor: colors['focusedBorderColor']!,
+    iconColor: colors['iconColor']!,
+  );
+}

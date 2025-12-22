@@ -1,0 +1,22 @@
+name: flutter_colorable_example
+description: Example usage of flutter_colorable annotations
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.0.0
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_colorable:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.0
+  flutter_colorable_generator:
+    path: ../flutter_colorable_generator
+  lints: ^3.0.0
