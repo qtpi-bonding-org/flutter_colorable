@@ -81,7 +81,7 @@ class ColorableGenerator extends GeneratorForAnnotation<ColorableWidget> {
 
   /// Gets the @Colorable annotation from a field, if present
   ConstantReader? _getColorableAnnotation(FieldElement field) {
-    for (final annotation in field.metadata) {
+    for (final annotation in field.metadata.annotations) {
       final value = annotation.computeConstantValue();
       if (value == null) continue;
 
