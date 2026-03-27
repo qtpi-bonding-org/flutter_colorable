@@ -26,6 +26,12 @@ class ColorableGenerator extends GeneratorForAnnotation<ColorableWidget> {
 
     final classElement = element;
     final className = classElement.name;
+    if (className == null) {
+      throw InvalidGenerationSourceError(
+        '@ColorableWidget applied to a class with no name.',
+        element: element,
+      );
+    }
     final widgetKey = annotation.read('widgetKey').stringValue;
     final widgetDescription = annotation.peek('description')?.stringValue;
 
@@ -59,8 +65,11 @@ class ColorableGenerator extends GeneratorForAnnotation<ColorableWidget> {
           continue;
         }
 
+        final fieldName = field.name;
+        if (fieldName == null) continue;
+
         fields.add(_ColorableFieldInfo(
-          name: field.name,
+          name: fieldName,
           description: colorableAnnotation.peek('description')?.stringValue,
           defaultColor: colorableAnnotation.peek('defaultColor')?.stringValue,
         ));
@@ -72,8 +81,8 @@ class ColorableGenerator extends GeneratorForAnnotation<ColorableWidget> {
 
   /// Gets the @Colorable annotation from a field, if present
   ConstantReader? _getColorableAnnotation(FieldElement field) {
-    for (final metadata in field.metadata) {
-      final value = metadata.computeConstantValue();
+    for (final annotation in field.metadata) {
+      final value = annotation.computeConstantValue();
       if (value == null) continue;
 
       final type = value.type;
@@ -96,10 +105,10 @@ class ColorableGenerator extends GeneratorForAnnotation<ColorableWidget> {
     final library = element.library;
     if (library == null) return false;
 
-    final source = library.source.uri.toString();
-    return source.contains('dart:ui') ||
-        source.contains('flutter') ||
-        source.contains('painting');
+    final uri = library.identifier;
+    return uri.contains('dart:ui') ||
+        uri.contains('flutter') ||
+        uri.contains('painting');
   }
 
   /// Generates the output code
